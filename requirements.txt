@@ -1,0 +1,7 @@
+jupyter
+pandas
+numpy
+seaborn
+matplotlib
+# sentence-transformers
+ortools
