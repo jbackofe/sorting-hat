@@ -46,9 +46,6 @@ To stop and remove the containers, use the following Docker Compose command:
 
 `docker-compose down`
 
-## Customizing Your Setup
-Feel free to modify the Docker Compose configurations and Dockerfiles to match your specific requirements, such as changing exposed ports, adding new services, or tweaking environment variables.
-
 ## Contributing
 Contributions to Sorting Hat are welcome! Please read our contributing guidelines and submit pull requests to our repository.
 
