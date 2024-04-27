@@ -22,8 +22,10 @@ Before you can run Sorting Hat, you need to have Docker and Docker Compose insta
 ### Clone the Repository
 First, clone the repository to your local machine:
 
-`git clone https://github.com/yourusername/sorting-hat.git`
-`cd sorting-hat`
+```
+git clone https://github.com/yourusername/sorting-hat.git
+cd sorting-hat
+```
 
 ### Start the Project
 To start all services defined in the Docker Compose file, run the following command from the root of your cloned repository:
