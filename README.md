@@ -23,7 +23,7 @@ Before you can run Sorting Hat, you need to have Docker and Docker Compose insta
 First, clone the repository to your local machine:
 
 ```
-git clone https://github.com/yourusername/sorting-hat.git
+git clone https://github.com/jbackofe/sorting-hat.git
 cd sorting-hat
 ```
 
