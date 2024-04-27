@@ -3,5 +3,5 @@ pandas
 numpy
 seaborn
 matplotlib
-# sentence-transformers
 ortools
+pymongo

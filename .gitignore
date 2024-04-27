@@ -1,3 +1,6 @@
 *.csv
+*.ipynb_checkpoints
 /venv
-/.ipynb_checkpoints
+/data
+.jupyter/
+.streamlit/

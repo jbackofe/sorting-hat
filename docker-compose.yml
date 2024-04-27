@@ -1,0 +1,47 @@
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    volumes:
+      - ./data:/var/lib/data
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    expose:
+      - 27017
+
+  jupyter:
+    image: jupyter/scipy-notebook:lab-4.0.2
+    depends_on:
+      - mongo
+    ports:
+      - '10000:8888'
+    environment:
+      JUPYTER_ENABLE_LAB: 'yes'
+    volumes:
+      - ./jupyter/notebooks:/home/jovyan/work
+      - ./jupyter/requirements.txt:/home/jovyan/work/requirements.txt
+      - ./data:/home/jovyan/data
+      - ./streamlit/app.py:/home/jovyan/streamlit
+    command: >
+      sh -c "pip install --no-cache-dir -r /home/jovyan/work/requirements.txt &&
+             start-notebook.sh --NotebookApp.token=''"
+    container_name: jupyter
+
+  streamlit:
+    build:
+      context: ./streamlit
+      dockerfile: Dockerfile
+    depends_on:
+      - mongo
+    ports:
+      - '8501:8501'
+    volumes:
+     - ./streamlit:/app
+
+volumes:
+  data:
+  notebooks:
+  streamlit:
